@@ -9,11 +9,12 @@ import { QuestionService } from '../question.service';
 })
 export class QuestionFormComponent implements OnInit {
 
+     i:number=0;
     questions:Question[]=[];
   constructor(private questionService:QuestionService) { }
 
   ngOnInit(): void {
-   this.questionService.getAllQuestions("c").subscribe((data)=>{
+   this.questionService.getAllQuestions("prg").subscribe((data)=>{
     console.log(data);
     this.questions=data;
    })
